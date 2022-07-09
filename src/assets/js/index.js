@@ -16,7 +16,7 @@ function Switch() {
         if (newColor == 'yes') {
             let Color = prompt("Digite a cor em Hexadecimal por favor");
             arrayName.unshift(Color);
-            count = 1;
+            count = 0;
 
         } else {
             let question = prompt("Deseja Apagar alguma cor? yes or not");
@@ -32,6 +32,6 @@ function Switch() {
 }
 
 
-function random() {
-    var randomizar = arrayName[Math.floor(Math.random() * arrayName.length)];
-}
+// function random() {
+//     var randomizar = arrayName[Math.floor(Math.random() * arrayName.length)];
+// }
