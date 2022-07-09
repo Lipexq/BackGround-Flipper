@@ -1,36 +1,37 @@
 let arrayName = ['#c8a2c8', '#0000FF', '#808080', '#008000', '#FF0000'];
 
-var count = 1;
+var count = 0;
 
 function Switch() {
 
     if (count < arrayName.length) {
         document.getElementById('corpo').style.backgroundColor = arrayName[count];
-        document.getElementById('selection').innerHTML = "ID da cor = " + count + '<br/>' + "Cor atual " + arrayName[count];
+        document.getElementById('selection').innerHTML = "id color = " + (count + 1 );
         count++;
 
     } else {
-        count = 1;
-        let newColor = prompt("Deseja adicionar alguma cor? yes or not");
-
-        if (newColor == 'yes') {
-            let Color = prompt("Digite a cor em Hexadecimal por favor");
-            arrayName.unshift(Color);
-            count = 0;
-
-        } else {
-            let question = prompt("Deseja Apagar alguma cor? yes or not");
-
-            if (question == 'yes') {
-               var delets = prompt("Digite o ID da cor a ser apagada");
-                arrayName.splice(delets-1, 1);
-            } else {
-                alert("blz bb então nao apaga nada (y) chatao hein");
-            }
-        }
+        count = 0;
     }
 }
 
+function addColor() {
+    let Color = prompt("Digite uma cor em Hexadecimal");
+    arrayName.unshift(Color);
+    count = 0;
+
+    if (Color == "") {
+        alert("selecione uma cor valida!");
+    }
+}
+
+function delet() {
+    let delets = prompt("Digite o ID da cor a ser apagada");
+    arrayName.splice(delets - 1, 1);
+    count = 0;
+    if(delets == ''){
+        alert("digite um ID por favor");
+    }
+}
 
 // function random() {
 //     var randomizar = arrayName[Math.floor(Math.random() * arrayName.length)];
