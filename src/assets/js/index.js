@@ -1,4 +1,8 @@
-let arrayName = ['#c8a2c8', '#0000FF', '#808080', '#008000', '#FF0000'];
+let arrayName = ['purple', 'yellow', 'brown', 'orange'];
+// let objects = [
+//     {Color: 'purple', ID: '1'}
+// ]
+
 
 var count = 0;
 
@@ -6,7 +10,8 @@ function Switch() {
 
     if (count < arrayName.length) {
         document.getElementById('corpo').style.backgroundColor = arrayName[count];
-        document.getElementById('selection').innerHTML = "id color = " + (count + 1 );
+        // (count>0) ? document.getElementById('').innerHTML = "id color =" = + (count-1) + '<br/>' + 'Cor atual: ' + arrayName[count] : count;
+        document.getElementById('selection').innerHTML = "id color = " + (count + 1) + '<br/>' + 'Cor atual: ' + arrayName[count];
         count++;
 
     } else {
@@ -15,24 +20,40 @@ function Switch() {
 }
 
 function addColor() {
-    let Color = prompt("Digite uma cor em Hexadecimal");
+    let Color = prompt("Digite uma cor em inglês");
+
     arrayName.unshift(Color);
     count = 0;
 
-    if (Color == "") {
+    if (Color == '') {
         alert("selecione uma cor valida!");
+        count = 0;
     }
+
+    return Switch();
 }
 
 function delet() {
-    let delets = prompt("Digite o ID da cor a ser apagada");
-    arrayName.splice(delets - 1, 1);
-    count = 0;
-    if(delets == ''){
-        alert("digite um ID por favor");
+    let delets = prompt("digite o nome da cor a ser deletada");
+
+    if (delets.match(arrayName[delets])) {
+        let deleti = parseInt(prompt("Digite o ID da cor a ser apagada"));
+        arrayName.splice(deleti - 1, 1);
+        count = 0;
+        alert('cor apagada com sucesso!')
+        return Switch();
+
+    } else {
+        alert("cor invalida vei");
+        count = 0;
+        return Switch();
     }
 }
 
-// function random() {
-//     var randomizar = arrayName[Math.floor(Math.random() * arrayName.length)];
-// }
+function shuffleArray() {
+    arrayName.sort();
+    alert("Cores em ordem alfabeticas com sucesso!");
+    count = 0;
+    return Switch();
+
+    }
