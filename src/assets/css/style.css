@@ -1,33 +1,53 @@
-*{
+* {
     padding: 0px;
     margin: 0px;
 }
 
-#corpo{
+#corpo {
     height: auto;
 }
 
-#selection{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: 260px;
-    font-size: 22px;
+#rowRight{
+    position: absolute;
+    right: 30px;
+    top: 278px;
+    height: 100px;
+    width: 100px;
 }
 
-.button-container{
+#rowLeft{
+    position: absolute;
+    left: 30px;
+    top: 278px;
+    height: 100px;
+    width: 100px;
+}
+
+#selection {
+    display: flex;
+    justify-content: center;
+    height: auto;
+
+    font-size: 20px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.button-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    height: 580px;
+    flex-direction: column;
+    height: auto;
+    margin-top: 70px;
 }
 
-.button{
+.button {
     width: 200px;
     height: 40px;
     background-color: white;
     color: black;
     border-radius: 50px;
     cursor: pointer;
+    margin: 10px;
 }

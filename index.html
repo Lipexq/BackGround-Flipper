@@ -11,11 +11,13 @@
 
 <body id="corpo">
     <p id="selection"></p>
+    <img src="src/assets/img/left.png" alt="seta a esquerda" id="rowLeft" onclick="back()">
+    <img src="src/assets/img/right.png" alt="seta a direita" id="rowRight" onclick="go()">
     <div class="button-container">
-        <button class="button" type="button" onclick="Switch()">Clique para ver mais cores</button>
-        <button class="button" type="button" onclick="addColor()">Adicionar cor</button>
-        <button class="button" type="button" onclick="delet()">Deletar cor</button>
-        <button class="button" type="button" onclick="shuffleArray()">Colocar as cores em ordem!</button>
+        <button class="button" type="button" onclick="addColor()"> Adicionar cor</button>
+        <button class="button" type="button" onclick="remove()"> Deletar cor</button>
+        <button class="button" type="button" onclick="shuffle(arrayColor)"> Randomizar Cores</button>
+        <button class="button" type="button" onclick="displays()"> Exibir as cores</button>
     </div>
 
     <script src="src/assets/js/index.js"></script>
