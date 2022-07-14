@@ -10,15 +10,31 @@
 </head>
 
 <body id="corpo">
+
     <p id="selection"></p>
+    <div class="modal-container">
+      <div class="modal">
+        <h2>Todas as Cores</h2>
+        <hr />
+        <span id='a'> </span>
+        <hr />
+        <div class="btns">
+          <button type="submit" class="btnOK" onclick="remove()">Apagar</button>
+          <input type="text" class="btn" placeholder="Digite a cor" id="color-valor">
+          <button class="btnClose" onclick="closeModal()">Voltar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+        <button class="button" onclick="addColor()"> Adicionar cor</button>
+        <button class="btnOpenModal" onclick="takes()">Deletar cor</button>
+        <button class="button" onclick="shuffle(arrayColor)"> Randomizar Cores</button>
+        <button class="button" onclick="displays()"> Exibir as cores</button>
+    </div>
+
     <img src="src/assets/img/left.png" alt="seta a esquerda" id="rowLeft" onclick="back()">
     <img src="src/assets/img/right.png" alt="seta a direita" id="rowRight" onclick="go()">
-    <div class="button-container">
-        <button class="button" type="button" onclick="addColor()"> Adicionar cor</button>
-        <button class="button" type="button" onclick="remove()"> Deletar cor</button>
-        <button class="button" type="button" onclick="shuffle(arrayColor)"> Randomizar Cores</button>
-        <button class="button" type="button" onclick="displays()"> Exibir as cores</button>
-    </div>
 
     <script src="src/assets/js/index.js"></script>
 </body>

@@ -1,11 +1,135 @@
 * {
-    padding: 0px;
-    margin: 0px;
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+/* Modal start */
+  .btnOpenModal {
+    width: 20vw;
+    font-size:large;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+  }
+  
+  hr {
+    border: 0px;
+    border-top: 1px solid black;
+  }
+  
+  .modal-container {
+    width: 100vw;
+    position: fixed;
+    top: 30px;
+    display: none;
+    z-index: 999;
+    justify-content: center;
+  }
+  
+  .modal {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: black;
+    border-radius: 10px;
+    width: 50%;
+    color: white;
+  }
+  
+  .active {
+    display: flex;
+  }
+  
+  .active .modal {
+    animation: modal .4s;
+  }
+  
+  @keyframes modal {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -60px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  span {
+    margin: 10px auto;
+  }
+  
+  .btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .btns button {
+    font-size: medium;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .btns input {
+    font-size: medium;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: blueviolet;
+  }
 
-#corpo {
-    height: auto;
+  .btnOK {
+   background-color: blueviolet!important;
+  }
+  
+  .btnClose {
+    background-color: blueviolet!important;
+   }
+   
+   h2{
+    display: flex;
+    justify-content: center;
+   }
+/* Modal end */
+  
+/* button */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
+ .button{
+    width: 20vw;
+    margin: 10px;
+    font-size:large;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer
+ }
 
 #rowRight{
     position: absolute;
@@ -13,6 +137,7 @@
     top: 278px;
     height: 100px;
     width: 100px;
+    cursor: pointer;
 }
 
 #rowLeft{
@@ -21,33 +146,11 @@
     top: 278px;
     height: 100px;
     width: 100px;
-}
-
-#selection {
-    display: flex;
-    justify-content: center;
-    height: auto;
-
-    font-size: 20px;
-    padding-top: 100px;
-    padding-bottom: 50px;
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: auto;
-    margin-top: 70px;
-}
-
-.button {
-    width: 200px;
-    height: 40px;
-    background-color: white;
-    color: black;
-    border-radius: 50px;
     cursor: pointer;
-    margin: 10px;
+}
+
+#selection{
+  position: absolute;
+  top: 10%;
+  font-size: 22px;
 }
